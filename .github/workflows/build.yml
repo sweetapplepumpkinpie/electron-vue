@@ -16,8 +16,6 @@ on:
       - ".github/**"
       - "!.github/workflows/build.yml"
 
-name: Create Release
-
 jobs:
   build:
 
@@ -44,14 +42,7 @@ jobs:
         run: npm run build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          body: Changes in this Release
-            - First change
-            - Second Change
-          draft: false
-          prerelease: false
+        
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
