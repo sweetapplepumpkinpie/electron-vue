@@ -18,6 +18,21 @@
       "VITE_DEV_SERVER_URL": "http://127.0.0.1:3344/"
     }
   },
+  "build": {
+    "productName": "test",
+    "extends": null,
+    "appId": "com.appId",
+    "directories": {
+      "buildResources": "assets"
+    }
+  },
+  "publish": [
+    {
+      "provider": "github",
+      "owner": "sweetapplepumpkinpie",
+      "repo": "https://github.com/sweetapplepumpkinpie/electron-vue.git"
+    }
+  ],
   "scripts": {
     "dev": "vite",
     "electron:start": "electron .",
