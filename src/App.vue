@@ -9,7 +9,6 @@ console.log(
 
 <template>
   <div class="flex-center">
-    Place static files into the <code>/public</code> folder
     <img style="width: 5em" src="/node.svg" alt="Node logo" />
   </div>
 </template>
