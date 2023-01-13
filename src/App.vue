@@ -8,7 +8,7 @@ console.log(
 </script>
 
 <template>
-  <HelloWorld msg="Electron + Vite + Vue" />
+  <HelloWorld msg="Test release" />
   <div class="flex-center">
     Place static files into the <code>/public</code> folder
     <img style="width: 5em" src="/node.svg" alt="Node logo" />
