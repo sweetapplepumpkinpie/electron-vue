@@ -30,7 +30,7 @@ if (!app.requestSingleInstanceLock()) {
 }
 
 require("update-electron-app")({
-  repo: "https://github.com/sweetapplepumpkinpie/electron-vue.git",
+  repo: "sweetapplepumpkinpie/electron-vue.git",
   updateInterval: "5 minutes",
 })
 
