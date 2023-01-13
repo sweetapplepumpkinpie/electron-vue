@@ -10,6 +10,7 @@
     "dev": "vite",
     "serve": "vite preview",
     "electron:start": "electron .",
+    "publish": "electron-forge publish",
     "build": "vue-tsc --noEmit && vite build && electron-builder"
   },
   "engines": {
@@ -20,6 +21,7 @@
     "@tailwindcss/typography": "^0.5.8",
     "axios": "^1.2.2",
     "convert-csv-to-json": "^1.5.0",
+    "electron-forge": "^5.2.4",
     "electron-updater": "^5.3.0",
     "fs-jetpack": "^5.1.0",
     "json2csv": "^5.0.7",
@@ -33,6 +35,7 @@
     "vue3-toastify": "^0.0.4"
   },
   "devDependencies": {
+    "@electron-forge/publisher-github": "^6.0.4",
     "@types/axios": "^0.14.0",
     "@types/moment": "^2.13.0",
     "@vitejs/plugin-vue": "^4.0.0",

@@ -73,7 +73,7 @@ async function createWindow() {
     win?.webContents.send("main-process-message", new Date().toLocaleString())
   })
 
-  // autoUpdater.checkForUpdatesAndNotify().then((res) => console.log(res))
+  autoUpdater.checkForUpdatesAndNotify().then((res) => console.log(res))
 
   // Make all links open with the browser, not with the application
   win.webContents.setWindowOpenHandler(({ url }) => {
