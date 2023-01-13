@@ -1,7 +1,7 @@
 import { app, BrowserWindow, shell, ipcMain } from "electron"
 import { release } from "node:os"
 import { join } from "node:path"
-
+import { autoUpdater } from "electron-updater"
 // The built directory structure
 //
 // ├─┬ dist-electron
@@ -29,10 +29,10 @@ if (!app.requestSingleInstanceLock()) {
   process.exit(0)
 }
 
-require("update-electron-app")({
-  repo: "sweetapplepumpkinpie/electron-vue.git",
-  updateInterval: "5 minutes",
-})
+// require("update-electron-app")({
+//   repo: "sweetapplepumpkinpie/electron-vue.git",
+//   updateInterval: "5 minutes",
+// })
 
 // Remove electron security warnings
 // This warning only shows in development mode
@@ -72,6 +72,8 @@ async function createWindow() {
   win.webContents.on("did-finish-load", () => {
     win?.webContents.send("main-process-message", new Date().toLocaleString())
   })
+
+  // autoUpdater.checkForUpdatesAndNotify().then((res) => console.log(res))
 
   // Make all links open with the browser, not with the application
   win.webContents.setWindowOpenHandler(({ url }) => {
